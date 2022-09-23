@@ -5,6 +5,7 @@ import '@fontsource/cutive-mono';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import PostList from '../components/PostList';
+import Footer from '../components/Footer';
 
 export default function Home({posts = []}) {
   return (
@@ -14,6 +15,7 @@ export default function Home({posts = []}) {
       </Head>
       <Header/>
       <PostList {...posts}/>
+      <Footer/>
     </div>
   )
 }
