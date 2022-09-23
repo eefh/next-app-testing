@@ -1,0 +1,29 @@
+.post {
+    margin: 64px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgb(0, 132, 255);
+    transition: 400ms;
+    cursor: pointer;
+    color: rgb(210, 235, 255);
+}
+.post:hover {
+    box-shadow: 0px 0px 20px rgb(0, 217, 255);
+}
+.post > img {
+    width: 300px;
+    border-radius: 20px;
+    border: solid rgba(255, 255, 255, 0.527) 1px;
+}
+
+@media only screen and (max-width: 800px){
+    .post > img {
+        width: 200px;
+    }
+    .post {
+        font-size: 10px;
+    }
+}
