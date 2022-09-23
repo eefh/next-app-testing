@@ -19,7 +19,7 @@ export default function Home({posts = []}) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:3003/api/posts`)
+  const res = await fetch(`https://next-app-testing-api-lqma.vercel.app/api/posts`)
   const posts = await res.json();
   return {
     props: {
