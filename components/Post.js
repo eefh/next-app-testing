@@ -6,6 +6,7 @@ const Post = ({post}) => {
             <div className={styles.post}>
                 <img className={styles.image} src={post.body.image}/>
                 <h1>{post.body.title}</h1>
+                <p>{post.body.date}</p>
             </div>
            
         </Link>

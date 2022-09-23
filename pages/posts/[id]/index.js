@@ -5,13 +5,14 @@ const post = ({post}) => {
         <div className={styles.Page}>
             <h1>{post.posts[0].body.title}</h1>
             <img src={post.posts[0].body.image}/>
+            <p className={styles.date}>{post.posts[0].body.date}</p>
             <p>{post.posts[0].body.data}</p>
         </div>
     )
 }
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`http://localhost:3003/api/posts`);
+    const res = await fetch(`https://next-app-testing-api-lqma.vercel.app/api/posts`);
     const post = await res.json()
 
     return {
@@ -22,7 +23,7 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`http://localhost:3003/api/posts`);
+    const res = await fetch(`https://next-app-testing-api-lqma.vercel.app/api/posts`);
     const posts = await res.json()
     const ids = posts.posts.map(post => post._id);
 
